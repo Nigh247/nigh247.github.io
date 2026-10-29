@@ -22,14 +22,31 @@ header{
 	display: flex;
 	justify-content: center;
 	background-color: #000000;
+	grid-area: top;
 }
 
-body {
+body{
 	background-color: #333333;
 	color: #f8f8ff;
 	font-family: Arimo, Neue Helvetica, sans-serif;
 	padding: 0rem;
 	margin: 0rem;
+	display: grid;
+	grid-template-columns: 14rem 1fr;
+	grid-template-rows: 3rem 1fr;
+	grid-template-areas: 
+		"top  top"
+		"side main";
+	height: 100vh;
+}
+
+aside{
+	grid-area: side;
+	background-color: #2a2a2a;
+}
+
+main{
+	grid-area: main; overflow-y: auto;
 }
 
 #main-content{
